@@ -46,7 +46,6 @@ header p, .logo_header p {
   height: 113px;
   color: #353535;
   background-color: #EAEAEA;
-  box-shadow: 0 4px 8px rgba(34, 19, 19, 0.1); /* Ombre du conteneur */
   padding: 0 10px;
   box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(0, 0, 0, 0.3); /* Ombre fine en bas */
@@ -69,6 +68,129 @@ header p, .logo_header p {
 .texte-recherche::placeholder {
   font-weight: bold; /* Texte du placeholder en gras */
   color: #353535; /* Couleur du placeholder */
+}
+
+.explorer_restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centre le contenu verticalement */
+  height: 275px;
+  width: 100%;
+  background-color: rgb(239, 239, 239);
+  text-align: center;
+}
+
+.title_reservation {
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.paragraph_reservation {
+  margin: 0;
+  padding: 10px;
+}
+
+.button {
+  display: inline-flex; /* Utilise Flexbox pour le bouton */
+  justify-content: center; /* Centre le texte horizontalement */
+  align-items: center; /* Centre le texte verticalement */
+  margin-top: 20px;
+  height: 50px;
+  width: 186px;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(#FF79DA, #9356DC); /* Dégradé inversé au survol */
+}
+
+.white-button {
+  display: inline-flex; /* Utilise Flexbox pour le bouton */
+  justify-content: center; /* Centre le texte horizontalement */
+  align-items: center; /* Centre le texte verticalement */
+  background: rgb(239, 239, 239); /* Fond blanc */
+  color: #353535; /* Couleur du texte */
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+  border-radius: 20px;
+  height: 72.38px;
+  width: 335px;
+  transition: box-shadow 0.3s ease; /* Transition pour l'ombre */
+  position: relative; /* Position relative pour le positionnement absolu du numéro */
+  margin-top: 20px; /* Ajout d'un espacement entre les boutons */
+}
+
+.white-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
+}
+
+.white-button:focus,
+.white-button:active {
+  background: rgb(239, 239, 239); /* Assure que le fond reste blanc */
+  color: #353535; /* Assure que la couleur du texte reste inchangée */
+  outline: none; /* Retire l'effet de focus par défaut du navigateur */
+}
+
+.white-button i {
+  font-size: 1.4em; /* Augmente la taille des icônes */
+  margin-right: 38px; /* Ajustez cette valeur pour plus ou moins d'espacement */
+}
+
+.fonctionnement__number {
+  position: absolute;
+  left: -14px; /* Ajustez cette valeur pour la position exacte */
+  transform: translateY(54%);
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centre le contenu verticalement */
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px 0; /* Ajoute du padding en haut et en bas */
+}
+
+.title_fonctionnement {
+  display: flex;
+  margin-left: 10%;
+  padding: 10px;
+  font-size: 24px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.buttons_fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  position: relative; /* Position relative pour le conteneur du bouton */
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Espacement entre les boutons */
 }
 
 /*# sourceMappingURL=style.css.map */
