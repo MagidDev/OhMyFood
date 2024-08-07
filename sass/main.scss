@@ -4,22 +4,21 @@
 @import "./layouts/header.scss";
 
 
-.explorer_restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;         /* Centre le contenu verticalement */
-    height: 275px;
-    width: 100%;
-    background-color: rgb(239 239 239);
-    text-align: center;
-}
+explorer_restaurants 
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center         /* Centre le contenu verticalement */
+    height: 275px
+    width: 100%
+    background-color: rgb(239 239 239)
+    text-align: center
 
-.title_reservation {
-    margin: 0;
-    padding: 10px;
-    font-size:24px;
-}
+title_reservation 
+    margin: 0
+    padding: 10px
+    font-size:24px
+
 
 .paragraph_reservation {
     margin: 0;
@@ -79,39 +78,39 @@
     margin-right: 38px; /* Ajustez cette valeur pour plus ou moins d'espacement */
 }
 
-.fonctionnement__number {
-    position: absolute;
-    left: -14px;                         /* Ajustez cette valeur pour la position exacte */
-    transform: translateY(54%);
-    background-color: $primary-color;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    color: white;
+fonctionnement__number 
+    position: absolute
+    left: -14px                         /* Ajustez cette valeur pour la position exacte */
+    transform: translateY(54%)
+    background-color: $primary-color
+    border-radius: 50%
+    width: 24px
+    height: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 14px
+    color: white
 }
 
 
-.fonctionnement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;                /* Centre le contenu verticalement */
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px 0;                        /* Ajoute du padding en haut et en bas */
-}
+fonctionnement 
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center                /* Centre le contenu verticalement */
+    width: 100%
+    background-color: rgb(255, 255, 255)
+    text-align: center
+    padding: 20px 0                        /* Ajoute du padding en haut et en bas */
+
 
 .title_fonctionnement {
     display: flex;
     margin-left: 10%;
     padding: 10px;
     font-size: 24px;
-    width: 100%;
+    width: 375px;
     justify-content: flex-start;
 }
 
@@ -126,4 +125,76 @@
     display: flex;
     align-items: center;
     margin-top: 20px;                       /* Espacement entre les boutons */
+}
+
+.Restaurants {
+    padding: 20px;
+    background-color: #f9f9f9;
+    width: 375px;
+}
+
+.title_restaurants {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Conteneur des cartes de restaurants */
+.Restaurants_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 375px;
+}
+
+/* Lien cliquable */
+.Restaurants_cards a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%; /* S'assure que le lien prend toute la largeur */
+    max-width: 375px;
+}
+
+/* Carte de restaurant */
+.card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* S'assure que la carte prend toute la largeur */
+    max-width: 375px; /* Limite la largeur maximale à 375px */
+    margin-bottom: 20px; /* Espace entre les cartes */
+}
+
+/* Image de la carte */
+.card img {
+    width: 375px;
+    height: auto;
+    display: block;
+    max-width: 375px;
+}
+
+/* Contenu de la carte */
+.card-content {
+    padding: 15px;
+}
+
+/* Texte de la carte */
+.card-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Titre de la carte */
+.card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Sous-titre de la carte */
+.card-subtitle {
+    font-size: 14px;
+    color: #777;
 }
