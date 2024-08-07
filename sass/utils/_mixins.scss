@@ -1,0 +1,12 @@
+@mixin cursive__logo {
+    font-size: 27px;
+    font-family: "Shrikhand",cursive;
+}
+
+@mixin object_shadow($color) {
+    box-shadow: 0 4px 10px 0 $color;
+}
+
+@mixin gradient ($oriantation: $degree) {
+    background:linear-gradient( $degree, $primary-color, $secondary-color);
+}

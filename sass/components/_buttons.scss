@@ -1,0 +1,18 @@
+.explore__button {
+    width: 218px;
+    height: 50px;
+    color: $white;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 13px auto 38px auto;
+    transition: opacity 300ms ease-in-out;
+    @include gradient;
+    position: relative;
+
+    &:hover {
+        opacity: 0.88;
+    }
+}
