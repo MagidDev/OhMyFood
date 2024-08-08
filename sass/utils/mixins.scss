@@ -16,3 +16,9 @@
         @content;
     }
 }
+
+@mixin table__responsive {
+    @media all and (min-width: map-get($breakpoints, table)) {
+       @content;
+    }
+}

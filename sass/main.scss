@@ -1,5 +1,6 @@
 @import "./utils/variables.scss";      // Variables d'abord
 @import "./utils/mixins.scss";        // Ensuite les mixins
+@import "./utils/animations.scss";   // Animations
 @import "./base/normalizer.scss";      // Fichiers de base comme normalizer
 @import "./base/font_family.scss";     // Polices
 @import "./layouts/header.scss";       // Styles de mise en page (layout)

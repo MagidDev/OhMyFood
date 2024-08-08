@@ -1,7 +1,96 @@
+@charset "UTF-8";
 /*** Color ***/
 /*** gradient***/
+/* CSS pour les éléments d'entrée */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.race-list:nth-child(1) .race-cards {
+  animation: appear 2.5s ease forwards;
+  opacity: 0;
+}
+
+/* CSS pour les éléments de plat */
+.race-list:nth-child(2) .race-cards {
+  animation: appear 5.5s ease forwards;
+  opacity: 0;
+}
+
+/* CSS pour les éléments de dessert */
+.race-list:nth-child(3) .race-cards {
+  animation: appear 7.5s ease forwards;
+  opacity: 0;
+}
+
+/* Animation pour les éléments menu */
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background-color: #ffffff;
+  opacity: 0.9;
+  animation: disappear 0s 3s forwards;
+  display: grid;
+  place-items: center;
+}
+.loader__text {
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  color: #9356DC;
+}
+
+.loader-dots {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+  flex-wrap: wrap;
+}
+.loader-dots .loader-dot {
+  width: 20%;
+  height: 20%;
+  margin: 0;
+  border-radius: 100%;
+  background-color: #9356DC;
+  animation: three 1s infinite ease-in-out both;
+  animation-delay: 0ms;
+}
+.loader-dots .loader-dot__2 {
+  animation-delay: 225ms;
+}
+.loader-dots .loader-dot__3 {
+  animation-delay: 450ms;
+}
+
+@keyframes three {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
 body {
   margin: auto;
   width: 100%;
@@ -319,6 +408,17 @@ input.heart-check:not(checked) + .button__like::after {
     gap: 40px;
   }
 }
+@media all and (min-width: 768px) {
+  .restaurant__bloc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 75%;
+    margin: auto;
+    gap: 40px;
+  }
+}
 .restaurant__title {
   padding: 28px;
   margin-bottom: -10px;
@@ -344,6 +444,11 @@ input.heart-check:not(checked) + .button__like::after {
   box-shadow: 0 4px 10px 0 #d5d5d5;
 }
 @media all and (min-width: 1024px) {
+  .restaurant__cards {
+    width: calc(50% - 40px);
+  }
+}
+@media all and (min-width: 768px) {
   .restaurant__cards {
     width: calc(50% - 40px);
   }
@@ -414,30 +519,50 @@ input.heart-check:not(checked) + .button__like::after {
   border-radius: 25px 25px 0px 0px;
   padding: 2% 5% 5% 5%;
   z-index: 0;
-  max-width: 1024px;
-  margin: auto;
+}
+@media all and (min-width: 1024px) {
+  .slight {
+    max-width: 1024px;
+    margin: auto;
+  }
 }
 .slight__heading {
   display: flex;
   align-items: center;
   margin: auto;
-  width: 400px;
-  height: 41px;
-  justify-content: center;
-  width: 400px;
-  height: 41px;
-  justify-content: center;
 }
 .slight__heading h2 {
   width: 87%;
   font-size: 25px;
   font-family: "Shrikhand", cursive;
-  display: flex;
-  font-size: 40px;
-  width: 95%;
-  display: flex;
-  font-size: 35px;
-  width: 95%;
+}
+@media all and (min-width: 1024px) {
+  .slight__heading h2 {
+    display: flex;
+    font-size: 40px;
+    width: 95%;
+  }
+}
+@media all and (min-width: 768px) {
+  .slight__heading h2 {
+    display: flex;
+    font-size: 35px;
+    width: 95%;
+  }
+}
+@media all and (min-width: 768px) {
+  .slight__heading {
+    width: 400px;
+    height: 41px;
+    justify-content: center;
+  }
+}
+@media all and (min-width: 1024px) {
+  .slight__heading {
+    width: 400px;
+    height: 41px;
+    justify-content: center;
+  }
 }
 .slight__heading--heart {
   position: relative;
@@ -448,17 +573,25 @@ input.heart-check:not(checked) + .button__like::after {
 }
 .slight__container {
   margin: -10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+}
+@media all and (min-width: 1024px) {
+  .slight__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 
 .race-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+}
+@media all and (min-width: 768px) {
+  .race-list {
+    width: 100%;
+  }
 }
 .race-list__heading {
   position: relative;
@@ -467,7 +600,11 @@ input.heart-check:not(checked) + .button__like::after {
   font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 22px;
+}
+@media all and (min-width: 1024px) {
+  .race-list__heading {
+    font-size: 22px;
+  }
 }
 .race-list__heading::after {
   display: block;
@@ -492,10 +629,10 @@ input.heart-check:not(checked) + .button__like::after {
   overflow: hidden;
   cursor: pointer;
 }
-.race-cards:hover .race-cards__checkout {
+.race-cards:hover > .race-cards__checkout {
   margin-right: 0px;
 }
-.race-cards:hover .race-cards__checkout::after {
+.race-cards:hover > .race-cards__checkout::after {
   transform: rotate(360deg);
 }
 .race-cards__info {

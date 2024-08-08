@@ -17,9 +17,11 @@
     padding: 2% 5% 5% 5%;
     z-index: 0;
     // le Z index sert a faire passer la div par dessus l'image 
-    max-width: 1024px;
-    margin: auto;
-
+    @include desktop__responsive {
+        max-width: 1024px;
+        margin: auto;
+    }
+  
     &__heading {
         display: flex;
         align-items: center;
@@ -28,64 +30,82 @@
             width: 87%;
             font-size: 25px;
             font-family: "Shrikhand", cursive;
-            display: flex;
-            font-size: 40px;
-            width: 95%;
-            display: flex;
-            font-size: 35px;
-            width: 95%;
+            @include desktop__responsive {
+                display: flex;
+                font-size: 40px;
+                width: 95%;
+            }
+    
+            @include table__responsive {
+                display: flex;
+                font-size: 35px;
+                width: 95%;
+            }
         }
-        width: 400px;
-        height: 41px;
-        justify-content: center;
-        width: 400px;
-        height: 41px;
-        justify-content: center;
+        @include table__responsive {
+            width: 400px;
+            height: 41px;
+            justify-content: center;
+        }
+
+        @include desktop__responsive {
+            width: 400px;
+            height: 41px;
+            justify-content: center;
+        }
         &--heart {
             position: relative;
         }
     }
-    &__orderbtn {
+    &__orderbtn{
         display: flex;
         justify-content: center;
     }
 
-    &__container {
+    &__container{
         margin: -10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
+        @include table__responsive ; @include desktop__responsive{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
     } 
 }
+
 
 .race-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-
-    &__heading {
-        position: relative;
-        margin: 4% 0% 2% 0%;
-        padding: 10px 0px;
-        font-size: 18px;
-        font-weight: 300;
-        text-transform: uppercase;
-        // text transform permet de changer la manière dont est écrit le texte ici tout en capitale
+    @include desktop__responsive ; @include table__responsive {
+        width: 100%;
+    }
+ 
+&__heading {
+    position: relative;
+    margin: 4% 0% 2% 0%;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    // text transform permet de changer la manière dont est écrit le texte ici tout en capitale
+    
+    @include desktop__responsive {
         font-size: 22px;
     }
-    &__heading::after {
-        display: block;
-        position: absolute;
-        bottom: 2px;
-        content: "";
-        width: 40px;
-        height: 4px;
-        background-color: #99E2D0;
-    }
-    // le ::after permet d'afficher la bordure verte après le heading H3 . Content "" signifie que le content est  vide mais contient un trait .
 }
+&__heading::after {
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    content: "";
+    width: 40px;
+    height: 4px;
+    background-color: #99E2D0;
+  }
+}
+//   le ::after permet d'afficher la bordure verte après le heading H3 . Content "" signifie que le content est  vide mais contient un trait . 
 
 .race-cards {
     position: relative;
@@ -99,8 +119,7 @@
     box-shadow: 0 4px 10px 0 #d5d5d5;
     overflow: hidden;
     cursor: pointer;
-
-    &:hover &__checkout {
+    &:hover>&__checkout {
         margin-right: 0px;
 
         &::after {
@@ -108,73 +127,74 @@
         }
     }
 
-    &__info {
-        display: flex;
-        flex: 1;
-        justify-content: space-between;
-        width: 100%;
-        margin: 2%;
-        gap: 2%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        // affichage des ... une fois que le slide va arriver
-        padding: 5px;
-    }
-    &__description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-        padding: 5px;
-    }
-    &__description h4 {
-        margin: 0;
-        font-size: 22px;
-        font-weight: 500;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__description p {
-        margin: 0;
-        font-weight: 300;
-        font-size: 18px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    &__price {
-        display: flex;
-        align-items: flex-end;
-        width: 15%;
-        padding: 5px;
-        font-size: 20px;
-    }
-    &__price p {
-        margin: 0;
-        font-weight: 500;
-    }
-    &__checkout {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        width: 20%;
-        margin-right: -20%;
-        border-radius: 0px 15px 15px 0px;
-        background-color: $tertiary-color;
-        transition: margin-right 800ms cubic-bezier(.63, 1.23, .96, .92);
+&__info {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2%;
+    gap: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // affichage des ... une fois que le slide va arriver
+    padding: 5px;
+}
+&__description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 5px;
+}
+&__description h4 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+&__description p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+&__price {
+    display: flex;
+    align-items: flex-end;
+    width: 15%;
+    padding: 5px;
+    font-size: 20px;
+}
+&__price p {
+    margin: 0;
+    font-weight: 500;
+}
+&__checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 20%;
+    margin-right: -20%;
+    border-radius: 0px 15px 15px 0px;
+    background-color: $tertiary-color;
+    transition: margin-right 800ms cubic-bezier(.63, 1.23, .96, .92);
 
-        &::after {
-            display: inline-block;
-            margin: auto;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            font-size: 25px;
-            content: "\f058";
-            color: $white;
-            transition: transform 800ms cubic-bezier(.63, 1.23, .96, .92);
-        }
+    &::after {
+        display: inline-block;
+        margin: auto;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 25px;
+        content: "\f058";
+        color: $white;
+        transition: transform 800ms cubic-bezier(.63, 1.23, .96, .92);
     }
+}
+
 }

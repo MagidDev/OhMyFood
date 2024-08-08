@@ -153,6 +153,15 @@ padding: 15px;
             margin: auto;        
             gap: 40px;
         }
+        @include table__responsive {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 75%;
+            margin: auto;        
+            gap: 40px;        
+        }
     }
     &__title {
         padding: 28px;
@@ -178,6 +187,9 @@ padding: 15px;
         @include desktop__responsive {
             width: calc(50% - 40px);
             // // le calc ici sert à espacer les cartes entre elles  elle est egale au gap du bloc parent 
+        }
+        @include table__responsive {
+            width: calc(50% - 40px);
         }
     }
     &__cards--img {

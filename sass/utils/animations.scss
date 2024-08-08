@@ -1,0 +1,107 @@
+/* CSS pour les éléments d'entrée */
+.race-list:nth-child(1) .race-cards {
+    animation: appear 2.5s ease forwards;
+    opacity: 0;
+  }
+  
+  /* CSS pour les éléments de plat */
+  .race-list:nth-child(2) .race-cards {
+    animation: appear 5.5s ease forwards;
+    opacity: 0;
+  }
+  
+  /* CSS pour les éléments de dessert */
+  .race-list:nth-child(3) .race-cards {
+    animation: appear 7.5s ease forwards;
+    opacity: 0;
+  }
+  
+  /* Animation pour les éléments menu */
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+// Loader //
+
+.loader {
+    position: fixed;
+    // fixe l'élement par rapport à la fenetre du navigateur 
+    inset: 0;
+    // place l'élement aux bords de la fenetre du navigateur
+    z-index: 2;
+    //  le fait passer  au dessus de tout
+    background-color: $white;
+    opacity: 0.9;
+    // 90% d'opacité
+    animation: disappear 0s 3s forwards;
+    // dispariation du loader en 3 secondes
+    display: grid;
+    place-items: center;
+    
+    &__text {
+      width: 100%;
+      text-align: center;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 35px;
+      color: $primary-color;
+    }
+  }
+
+  
+  .loader-dots {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 100px;
+    flex-wrap: wrap;
+   
+    .loader-dot {
+      width: 20%;
+      height: 20%;
+      margin: 0;
+      border-radius: 100%;
+      background-color: $primary-color;
+      animation: three 1s infinite ease-in-out both;
+      // indique que l'animation nommée three durera 1 seconde, se répétera indéfiniment, commencera lentement, accélérera au milieu,
+      // ralentira à la fin, et sera jouée dans les deux directions.
+      animation-delay: 0ms;
+   
+      &__2 {
+        animation-delay: 225ms;
+      }
+   
+      &__3 {
+        animation-delay: 450ms;
+      }
+    }
+  }
+
+@keyframes three {
+  0%, 80%, 100% {
+    transform:scale(0)
+  }
+  40% {
+    transform:scale(1);
+  }
+}
+// animation de clignotement , chaque point passe de l'echelle 0 à 1 et inversement
+  
+@keyframes disappear {
+  from {
+    transform: scale(1);  
+  }
+  to {
+      transform: scale(0);
+  }
+  // echelle 1 à 0 ( disparition )
+
+}
