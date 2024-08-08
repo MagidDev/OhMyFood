@@ -10,3 +10,9 @@
 @mixin gradient ($oriantation: $degree) {
     background:linear-gradient( $degree, $primary-color, $secondary-color);
 }
+
+@mixin desktop__responsive {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}

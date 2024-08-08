@@ -16,3 +16,57 @@
         opacity: 0.88;
     }
 }
+
+/***coeur plein***/
+input.heart-check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    z-index: 2;
+    &:checked + .button__like {
+        &::after {
+            z-index: 1;
+            position: absolute;
+            opacity: 1;
+            transition: opacity 250ms ease-in;
+        }
+    }
+    &:not(checked) + .button__like {
+        &::after {
+            z-index: 1;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 350ms ease-out;
+        }
+    }
+}
+.button__like {
+    color: $black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border: transparent 0px solid;
+    background-color: transparent;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        z-index: -1;
+        opacity: 0;
+        position: absolute;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 35px;
+        content: "\f004";
+        color: transparent;
+        @include gradient(45deg);
+        background-clip: text;
+        transform-origin: bottom;
+    }
+}
+
+        

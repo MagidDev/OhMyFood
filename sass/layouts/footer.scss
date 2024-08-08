@@ -3,15 +3,25 @@
     padding: 22px 25px;
     background-color: darken($white, 75%);
     color: $white;
+
+    @include desktop__responsive {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        height: 114px;
+        gap: 16px;
+      }
     
     p {
+        font-size: 16px;
         margin: 5px 0;
         max-width: fit-content;
     }
 
     &__logo {
         margin: 0 0 16px 0;
-        font-size: 27px;
+        font-size: 18px;
         font-family: "Shrikhand",cursive;
         max-width: fit-content;
     }
@@ -22,7 +32,12 @@
         position: relative;
         padding: 1rem;
         max-width: fit-content;
-}
+
+        @include desktop__responsive {
+            flex-direction: row;
+            gap: 7px;
+          }
+        }
 
 &__nav {
     display: flex;

@@ -9,5 +9,10 @@ $white: #ffffff;
 $shadow:#d5d5d5;
 $icon:#7e7e7e;
 
-/*** gradient degree ***/
+/*** gradient***/
 $degree: 357deg;
+
+$breakpoints:(
+    table: 768px,
+    desktop: 1024px,
+);
