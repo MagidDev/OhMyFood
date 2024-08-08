@@ -1,0 +1,42 @@
+.footer {
+    width: auto;
+    padding: 22px 25px;
+    background-color: darken($white, 75%);
+    color: $white;
+    
+    p {
+        margin: 5px 0;
+        max-width: fit-content;
+    }
+
+    &__logo {
+        margin: 0 0 16px 0;
+        font-size: 27px;
+        font-family: "Shrikhand",cursive;
+        max-width: fit-content;
+    }
+
+    &__bloc {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 1rem;
+        max-width: fit-content;
+}
+
+&__nav {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    gap: 7px;
+    max-width: fit-content;
+}
+&__nav--icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 13px;
+    font-size: 13px;
+}
+}

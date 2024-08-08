@@ -1,7 +1,8 @@
-@import "./utils/variables.scss";
-@import "./utils/_mixins.scss";
-@import "./components/buttons";
-@import "./layouts/header.scss";
-@import "./base/normalizer.scss";
-@import "./pages/home.scss";
-@import "./base/font_family.scss";
+@import "./utils/variables.scss";      // Variables d'abord
+@import "./utils/mixins.scss";        // Ensuite les mixins
+@import "./base/normalizer.scss";      // Fichiers de base comme normalizer
+@import "./base/font_family.scss";     // Polices
+@import "./layouts/header.scss";       // Styles de mise en page (layout)
+@import "./layouts/footer.scss";       // Footer après le header
+@import "./components/buttons.scss";        // Composants comme les boutons
+@import "./pages/home.scss";           // Styles spécifiques aux pages
