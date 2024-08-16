@@ -315,6 +315,11 @@ input.heart-check:not(checked) + .button__like::after {
   display: flex;
   font-size: 28px;
 }
+@media all and (min-width: 1024px) {
+  .fonctionnement h3 {
+    margin-left: 100px;
+  }
+}
 .fonctionnement__steps {
   display: flex;
   flex-direction: column;
@@ -326,7 +331,8 @@ input.heart-check:not(checked) + .button__like::after {
 @media all and (min-width: 1024px) {
   .fonctionnement__steps {
     margin: 11px;
-    width: 98%;
+    margin-left: 80px;
+    width: 92%;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -342,17 +348,14 @@ input.heart-check:not(checked) + .button__like::after {
   background-color: #F6F6F6;
   box-shadow: 0 4px 10px 0 #d5d5d5;
 }
+.fonctionnement__steps--step:hover {
+  background-color: #f2eafb;
+  box-shadow: 0 4px 10px 0 #bcbcbc;
+}
 @media all and (min-width: 1024px) {
   .fonctionnement__steps--step {
     width: 30%;
   }
-}
-.fonctionnement:hover {
-  background-color: #f2eafb;
-  box-shadow: 0 4px 10px 0 #bcbcbc;
-}
-.fonctionnement:hover > .fonctionnement__step__numbert__icon {
-  color: #9356DC;
 }
 
 .fonctionnement p {
@@ -414,7 +417,7 @@ input.heart-check:not(checked) + .button__like::after {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 75%;
+    max-width: 82%;
     margin: auto;
     gap: 40px;
   }
@@ -427,7 +430,7 @@ input.heart-check:not(checked) + .button__like::after {
 @media all and (min-width: 1024px) {
   .restaurant__title {
     max-width: 75%;
-    margin: auto auto -10px auto;
+    margin: auto auto -10px 7%;
     width: 100%;
   }
 }

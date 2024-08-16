@@ -59,6 +59,10 @@ padding: 15px;
         margin-left: 20px;
         display: flex;
         font-size: 28px;
+
+        @include desktop__responsive {
+            margin-left: 100px;
+        }
     }
     &__steps {
         display: flex;
@@ -70,7 +74,8 @@ padding: 15px;
 
         @include desktop__responsive {
             margin: 11px;
-            width: 98%;
+            margin-left: 80px;
+            width: 92%;
             flex-direction: row;
             justify-content: space-between;
         }
@@ -85,16 +90,14 @@ padding: 15px;
         gap: 4%;
         background-color: $lightgray;
         box-shadow: 0 4px 10px 0 #d5d5d5;
+        
+        &:hover {
+            background-color: lighten($primary-color, 35%);
+            @include object_shadow(darken($shadow,10%));
+        }
+
         @include desktop__responsive {
             width: 30%;
-        }
-    }
-    &:hover {
-        background-color: lighten($primary-color, 35%);
-        @include object_shadow(darken($shadow,10%));
-
-        &>.fonctionnement__step__numbert__icon {
-            color: $primary-color;
         }
     }
 }
@@ -158,7 +161,7 @@ padding: 15px;
             flex-direction: row;
             flex-wrap: wrap;
             width: 100%;
-            max-width: 75%;
+            max-width: 82%;
             margin: auto;        
             gap: 40px;        
         }
@@ -169,7 +172,7 @@ padding: 15px;
         font-size: 25px;
         @include desktop__responsive {
             max-width: 75%;
-            margin: auto auto -10px auto;
+            margin: auto auto -10px 7%;
             width: 100%;
         }
      }
