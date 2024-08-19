@@ -239,7 +239,7 @@ input.heart-check:not(checked) + .button__like::after {
   display: flex;
   border: transparent 0px solid;
   background-color: transparent;
-  font-size: 35px;
+  font-size: 29px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,7 +250,7 @@ input.heart-check:not(checked) + .button__like::after {
   position: absolute;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  font-size: 35px;
+  font-size: 29px;
   content: "\f004";
   color: transparent;
   background: linear-gradient(357deg, #9356DC, #FF79DA);

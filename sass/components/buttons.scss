@@ -50,7 +50,7 @@ input.heart-check {
     display: flex;
     border: transparent 0px solid;
     background-color: transparent;
-    font-size: 35px;
+    font-size: 29px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +61,7 @@ input.heart-check {
         position: absolute;
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        font-size: 35px;
+        font-size: 29px;
         content: "\f004";
         color: transparent;
         @include gradient(45deg);
