@@ -386,6 +386,10 @@ input.heart-check:not(checked) + .button__like::after {
   color: #7e7e7e;
 }
 
+.fa-store::before {
+  color: #9356DC;
+}
+
 .fonctionnement__step--step__paragraph {
   font-weight: 700;
 }

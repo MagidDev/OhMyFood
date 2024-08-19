@@ -131,6 +131,10 @@ padding: 15px;
     }
 }
 
+.fa-store::before {
+    color: $primary-color;
+}
+
 .fonctionnement__step--step__paragraph {
     font-weight: 700;
 }

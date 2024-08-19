@@ -1,0 +1,3 @@
+Le lien vers mon repository GitHub: https://github.com/MagidDev/OhMyFood.git
+
+Le lien de la version en ligne du site Internet: https://magiddev.github.io/OhMyFood/
